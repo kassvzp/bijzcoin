@@ -36,11 +36,11 @@
 
 namespace CryptoNote {
 namespace parameters {
-const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 47800000002000;
-const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 47800000002000;
-const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 10000000000000000000;
+const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 47800;
+const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 47800;
+const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000;
 //TODO Currency-specific address prefix
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = UINT64_C(0x1309cf);
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = UINT64_C(((6-7/675)));
 //TODO Choose maturity period for your currency
 const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 60;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
@@ -48,7 +48,7 @@ const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(27501705001000000000000000000);     // =27501705001  coins =0000_0000_0000_0000_00
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(754*456/3*2.49*1999999);     // =27501705001  coins =0000_0000_0000_0000_00
 const unsigned EMISSION_SPEED_FACTOR                         = UINT64_C(24);
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -78,7 +78,7 @@ const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR         = 32 * 1024;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR       = 365 * 240 * 60 * 60 / DIFFICULTY_TARGET;
 
 
-const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS     = 1;
+const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS     = 10000000000;
 const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_SECONDS    = DIFFICULTY_TARGET * CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS;
 
 
@@ -104,7 +104,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 
 //TODO Put here the name of your currency
 const char     CRYPTONOTE_NAME[]                             = "bijzcoin";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "5646vvdgrer5yfgdleu35jf7844ufjfir844ufkgohojru5849gugo12jkgo58gkgur754";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  2;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  2;
@@ -115,9 +115,9 @@ const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  2000;    //by de
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  10000;
 
 //TODO This port will be used by the daemon to establish connections with p2p network
-const int      P2P_DEFAULT_PORT                              = 38792;
+const int      P2P_DEFAULT_PORT                              = 8080;
 //TODO This port will be used by the daemon to interact with simlewallet
-const int      RPC_DEFAULT_PORT                              = 33678;
+const int      RPC_DEFAULT_PORT                              = 8080;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  90000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  400000;
@@ -132,13 +132,13 @@ const uint32_t P2P_DEFAULT_CONNECTION_TIMEOUT                = 5000;          //
 const uint32_t P2P_DEFAULT_PING_CONNECTION_TIMEOUT           = 2000;          // 2 seconds
 const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT                    = 60 * 2 * 1000; // 2 minutes
 const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          // 5 seconds
-const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "0x1309cf00000000000000000000000000000000000000000000000000000000";
+const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8664";
 
 //TODO Add here your network seed nodes
 const std::initializer_list<const char*> SEED_NODES = {
-  "185.204.0.11:33678",
-  "185.204.2.156:33678",
-  //"18:38791",
+  "1",
+  "1",
+  //"377.455.88.22:8080",
 };
 
 struct CheckpointData {
