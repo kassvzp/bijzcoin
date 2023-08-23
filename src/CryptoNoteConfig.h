@@ -103,7 +103,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 //TODO Put here the name of your currency
-const char     CRYPTONOTE_NAME[]                             = "bijzcoin";
+const char     CRYPTONOTE_NAME[]                             = "bidycoin";
 const char     GENESIS_COINBASE_TX_HEX[]                     = "5646vvdgrer5yfgdleu35jf7844ufjfir844ufkgohojru5849gugo12jkgo58gkgur754";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  2;
